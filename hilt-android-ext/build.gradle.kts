@@ -24,19 +24,15 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 
 dependencies {
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.junit)
     androidTestImplementation(libs.junit.ext)
@@ -52,7 +48,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.HuairenWu"
                 artifactId = "HiltAndroidExt"
-                version = "0.0.2"
+                version = "1.0.1"
             }
         }
     }

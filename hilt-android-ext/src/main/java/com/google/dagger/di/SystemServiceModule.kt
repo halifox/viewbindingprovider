@@ -69,170 +69,170 @@ object SystemServiceModule {
     fun provideContext(@ApplicationContext context: Context) = context
 
     @Provides
-    fun provideAccessibilityManager(context: Context) = ContextCompat.getSystemService(context, AccessibilityManager::class.java) ?: throw IllegalArgumentException()
+    fun provideAccessibilityManager(context: Context) = ContextCompat.getSystemService(context, AccessibilityManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideAccountManager(context: Context) = ContextCompat.getSystemService(context, AccountManager::class.java) ?: throw IllegalArgumentException()
+    fun provideAccountManager(context: Context) = ContextCompat.getSystemService(context, AccountManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideActivityManager(context: Context) = ContextCompat.getSystemService(context, ActivityManager::class.java) ?: throw IllegalArgumentException()
+    fun provideActivityManager(context: Context) = ContextCompat.getSystemService(context, ActivityManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideAlarmManager(context: Context) = ContextCompat.getSystemService(context, AlarmManager::class.java) ?: throw IllegalArgumentException()
+    fun provideAlarmManager(context: Context) = ContextCompat.getSystemService(context, AlarmManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideAudioManager(context: Context) = ContextCompat.getSystemService(context, AudioManager::class.java) ?: throw IllegalArgumentException()
+    fun provideAudioManager(context: Context) = ContextCompat.getSystemService(context, AudioManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideClipboardManager(context: Context) = ContextCompat.getSystemService(context, ClipboardManager::class.java) ?: throw IllegalArgumentException()
+    fun provideClipboardManager(context: Context) = ContextCompat.getSystemService(context, ClipboardManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideConnectivityManager(context: Context) = ContextCompat.getSystemService(context, ConnectivityManager::class.java) ?: throw IllegalArgumentException()
+    fun provideConnectivityManager(context: Context) = ContextCompat.getSystemService(context, ConnectivityManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideDevicePolicyManager(context: Context) = ContextCompat.getSystemService(context, DevicePolicyManager::class.java) ?: throw IllegalArgumentException()
+    fun provideDevicePolicyManager(context: Context) = ContextCompat.getSystemService(context, DevicePolicyManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideDownloadManager(context: Context) = ContextCompat.getSystemService(context, DownloadManager::class.java) ?: throw IllegalArgumentException()
+    fun provideDownloadManager(context: Context) = ContextCompat.getSystemService(context, DownloadManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideDropBoxManager(context: Context) = ContextCompat.getSystemService(context, DropBoxManager::class.java) ?: throw IllegalArgumentException()
+    fun provideDropBoxManager(context: Context) = ContextCompat.getSystemService(context, DropBoxManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideInputMethodManager(context: Context) = ContextCompat.getSystemService(context, InputMethodManager::class.java) ?: throw IllegalArgumentException()
+    fun provideInputMethodManager(context: Context) = ContextCompat.getSystemService(context, InputMethodManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideKeyguardManager(context: Context) = ContextCompat.getSystemService(context, KeyguardManager::class.java) ?: throw IllegalArgumentException()
+    fun provideKeyguardManager(context: Context) = ContextCompat.getSystemService(context, KeyguardManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideLayoutInflater(context: Context) = ContextCompat.getSystemService(context, LayoutInflater::class.java) ?: throw IllegalArgumentException()
+    fun provideLayoutInflater(context: Context) = ContextCompat.getSystemService(context, LayoutInflater::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideLocationManager(context: Context) = ContextCompat.getSystemService(context, LocationManager::class.java) ?: throw IllegalArgumentException()
+    fun provideLocationManager(context: Context) = ContextCompat.getSystemService(context, LocationManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideNfcManager(context: Context) = ContextCompat.getSystemService(context, NfcManager::class.java) ?: throw IllegalArgumentException()
+    fun provideNfcManager(context: Context) = ContextCompat.getSystemService(context, NfcManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideNotificationManager(context: Context) = ContextCompat.getSystemService(context, NotificationManager::class.java) ?: throw IllegalArgumentException()
+    fun provideNotificationManager(context: Context) = ContextCompat.getSystemService(context, NotificationManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun providePowerManager(context: Context) = ContextCompat.getSystemService(context, PowerManager::class.java) ?: throw IllegalArgumentException()
+    fun providePowerManager(context: Context) = ContextCompat.getSystemService(context, PowerManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideSearchManager(context: Context) = ContextCompat.getSystemService(context, SearchManager::class.java) ?: throw IllegalArgumentException()
+    fun provideSearchManager(context: Context) = ContextCompat.getSystemService(context, SearchManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideSensorManager(context: Context) = ContextCompat.getSystemService(context, SensorManager::class.java) ?: throw IllegalArgumentException()
+    fun provideSensorManager(context: Context) = ContextCompat.getSystemService(context, SensorManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideStorageManager(context: Context) = ContextCompat.getSystemService(context, StorageManager::class.java) ?: throw IllegalArgumentException()
+    fun provideStorageManager(context: Context) = ContextCompat.getSystemService(context, StorageManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideTelephonyManager(context: Context) = ContextCompat.getSystemService(context, TelephonyManager::class.java) ?: throw IllegalArgumentException()
+    fun provideTelephonyManager(context: Context) = ContextCompat.getSystemService(context, TelephonyManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideTextServicesManager(context: Context) = ContextCompat.getSystemService(context, TextServicesManager::class.java) ?: throw IllegalArgumentException()
+    fun provideTextServicesManager(context: Context) = ContextCompat.getSystemService(context, TextServicesManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideUiModeManager(context: Context) = ContextCompat.getSystemService(context, UiModeManager::class.java) ?: throw IllegalArgumentException()
+    fun provideUiModeManager(context: Context) = ContextCompat.getSystemService(context, UiModeManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideUsbManager(context: Context) = ContextCompat.getSystemService(context, UsbManager::class.java) ?: throw IllegalArgumentException()
+    fun provideUsbManager(context: Context) = ContextCompat.getSystemService(context, UsbManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideVibrator(context: Context) = ContextCompat.getSystemService(context, Vibrator::class.java) ?: throw IllegalArgumentException()
+    fun provideVibrator(context: Context) = ContextCompat.getSystemService(context, Vibrator::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideWallpaperManager(context: Context) = ContextCompat.getSystemService(context, WallpaperManager::class.java) ?: throw IllegalArgumentException()
+    fun provideWallpaperManager(context: Context) = ContextCompat.getSystemService(context, WallpaperManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideWifiP2pManager(context: Context) = ContextCompat.getSystemService(context, WifiP2pManager::class.java) ?: throw IllegalArgumentException()
+    fun provideWifiP2pManager(context: Context) = ContextCompat.getSystemService(context, WifiP2pManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideWifiManager(context: Context) = ContextCompat.getSystemService(context, WifiManager::class.java) ?: throw IllegalArgumentException()
+    fun provideWifiManager(context: Context) = ContextCompat.getSystemService(context, WifiManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideWindowManager(context: Context) = ContextCompat.getSystemService(context, WindowManager::class.java) ?: throw IllegalArgumentException()
+    fun provideWindowManager(context: Context) = ContextCompat.getSystemService(context, WindowManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideInputManager(context: Context) = ContextCompat.getSystemService(context, InputManager::class.java) ?: throw IllegalArgumentException()
+    fun provideInputManager(context: Context) = ContextCompat.getSystemService(context, InputManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideMediaRouter(context: Context) = ContextCompat.getSystemService(context, MediaRouter::class.java) ?: throw IllegalArgumentException()
+    fun provideMediaRouter(context: Context) = ContextCompat.getSystemService(context, MediaRouter::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideNsdManager(context: Context) = ContextCompat.getSystemService(context, NsdManager::class.java) ?: throw IllegalArgumentException()
+    fun provideNsdManager(context: Context) = ContextCompat.getSystemService(context, NsdManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideDisplayManager(context: Context) = ContextCompat.getSystemService(context, DisplayManager::class.java) ?: throw IllegalArgumentException()
+    fun provideDisplayManager(context: Context) = ContextCompat.getSystemService(context, DisplayManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideUserManager(context: Context) = ContextCompat.getSystemService(context, UserManager::class.java) ?: throw IllegalArgumentException()
+    fun provideUserManager(context: Context) = ContextCompat.getSystemService(context, UserManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideBluetoothManager(context: Context) = ContextCompat.getSystemService(context, BluetoothManager::class.java) ?: throw IllegalArgumentException()
+    fun provideBluetoothManager(context: Context) = ContextCompat.getSystemService(context, BluetoothManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideAppOpsManager(context: Context) = ContextCompat.getSystemService(context, AppOpsManager::class.java) ?: throw IllegalArgumentException()
+    fun provideAppOpsManager(context: Context) = ContextCompat.getSystemService(context, AppOpsManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideCaptioningManager(context: Context) = ContextCompat.getSystemService(context, CaptioningManager::class.java) ?: throw IllegalArgumentException()
+    fun provideCaptioningManager(context: Context) = ContextCompat.getSystemService(context, CaptioningManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideConsumerIrManager(context: Context) = ContextCompat.getSystemService(context, ConsumerIrManager::class.java) ?: throw IllegalArgumentException()
+    fun provideConsumerIrManager(context: Context) = ContextCompat.getSystemService(context, ConsumerIrManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun providePrintManager(context: Context) = ContextCompat.getSystemService(context, PrintManager::class.java) ?: throw IllegalArgumentException()
+    fun providePrintManager(context: Context) = ContextCompat.getSystemService(context, PrintManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideAppWidgetManager(context: Context) = ContextCompat.getSystemService(context, AppWidgetManager::class.java) ?: throw IllegalArgumentException()
+    fun provideAppWidgetManager(context: Context) = ContextCompat.getSystemService(context, AppWidgetManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideBatteryManager(context: Context) = ContextCompat.getSystemService(context, BatteryManager::class.java) ?: throw IllegalArgumentException()
+    fun provideBatteryManager(context: Context) = ContextCompat.getSystemService(context, BatteryManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideCameraManager(context: Context) = ContextCompat.getSystemService(context, CameraManager::class.java) ?: throw IllegalArgumentException()
+    fun provideCameraManager(context: Context) = ContextCompat.getSystemService(context, CameraManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideJobScheduler(context: Context) = ContextCompat.getSystemService(context, JobScheduler::class.java) ?: throw IllegalArgumentException()
+    fun provideJobScheduler(context: Context) = ContextCompat.getSystemService(context, JobScheduler::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideLauncherApps(context: Context) = ContextCompat.getSystemService(context, LauncherApps::class.java) ?: throw IllegalArgumentException()
+    fun provideLauncherApps(context: Context) = ContextCompat.getSystemService(context, LauncherApps::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideMediaProjectionManager(context: Context) = ContextCompat.getSystemService(context, MediaProjectionManager::class.java) ?: throw IllegalArgumentException()
+    fun provideMediaProjectionManager(context: Context) = ContextCompat.getSystemService(context, MediaProjectionManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideMediaSessionManager(context: Context) = ContextCompat.getSystemService(context, MediaSessionManager::class.java) ?: throw IllegalArgumentException()
+    fun provideMediaSessionManager(context: Context) = ContextCompat.getSystemService(context, MediaSessionManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideRestrictionsManager(context: Context) = ContextCompat.getSystemService(context, RestrictionsManager::class.java) ?: throw IllegalArgumentException()
+    fun provideRestrictionsManager(context: Context) = ContextCompat.getSystemService(context, RestrictionsManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideTelecomManager(context: Context) = ContextCompat.getSystemService(context, TelecomManager::class.java) ?: throw IllegalArgumentException()
+    fun provideTelecomManager(context: Context) = ContextCompat.getSystemService(context, TelecomManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideTvInputManager(context: Context) = ContextCompat.getSystemService(context, TvInputManager::class.java) ?: throw IllegalArgumentException()
+    fun provideTvInputManager(context: Context) = ContextCompat.getSystemService(context, TvInputManager::class.java) ?: throw NullPointerException()
 
     @Provides
-    fun provideUsageStatsManager(context: Context) = ContextCompat.getSystemService(context, UsageStatsManager::class.java) ?: throw IllegalArgumentException()
+    fun provideUsageStatsManager(context: Context) = ContextCompat.getSystemService(context, UsageStatsManager::class.java) ?: throw NullPointerException()
 
     @Provides
     fun provideSubscriptionManager(context: Context): SubscriptionManager {
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
-            ContextCompat.getSystemService(context, SubscriptionManager::class.java) ?: throw IllegalArgumentException()
+            ContextCompat.getSystemService(context, SubscriptionManager::class.java) ?: throw NullPointerException()
         } else {
-            throw IllegalArgumentException()
+            throw NullPointerException()
         }
     }
 
     @Provides
     fun provideNetworkStatsManager(context: Context): NetworkStatsManager {
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            ContextCompat.getSystemService(context, NetworkStatsManager::class.java) ?: throw IllegalArgumentException()
+            ContextCompat.getSystemService(context, NetworkStatsManager::class.java) ?: throw NullPointerException()
         } else {
-            throw IllegalArgumentException()
+            throw NullPointerException()
         }
     }
 }

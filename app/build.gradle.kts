@@ -35,7 +35,8 @@ android {
 }
 
 dependencies {
-implementation(project(":hilt-android-ext"))
+//    implementation(project(":hilt-android-ext"))
+    implementation("com.github.HuairenWu:HiltAndroidExt:1.0.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
