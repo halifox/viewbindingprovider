@@ -46,50 +46,26 @@ class MySymbolProcessor(private val environment: SymbolProcessorEnvironment) : S
         return emptyList()
     }
 
+    private val moduleAnnotation = AnnotationSpec.builder(ClassName("dagger", "Module")).build()
+    private val installInAnnotation = AnnotationSpec.builder(ClassName("dagger.hilt", "InstallIn"))
+        .addMember("%T::class", ClassName("dagger.hilt.android.components", "ActivityComponent"))
+        .build()
+    private val providesAnnotation = AnnotationSpec.builder(ClassName("dagger", "Provides"))
+        .build()
 
-    fun generateViewBindingModule(): FileSpec {
-        val packageName = "com.google.dagger.di"
-        val className = "ViewBindingModel"
-
-        // Create file builder
-        val fileBuilder = FileSpec.builder(packageName, className)
-
-        // Create module annotation
-        val moduleAnnotation = AnnotationSpec.builder(ClassName("dagger", "Module")).build()
-
-        // Create installIn annotation
-        val installInAnnotation = AnnotationSpec.builder(ClassName("dagger.hilt", "InstallIn"))
-            .addMember("%T::class", ClassName("dagger.hilt.android.components", "ActivityComponent"))
-            .build()
-
-        val providesAnnotation = AnnotationSpec.builder(ClassName("dagger", "Provides"))
-            .build()
-
-
-        // Create class builder
-        val classBuilder = TypeSpec.classBuilder(className)
+    private fun generateViewBindingModule(): FileSpec {
+        val fileBuilder = FileSpec.builder("com.google.dagger.di", "ViewBindingModel")
+        val classBuilder = TypeSpec.classBuilder("ViewBindingModel")
             .addAnnotation(moduleAnnotation)
             .addAnnotation(installInAnnotation)
-//            .addModifiers(KModifier.PUBLIC)
-
-        // Create provide method
         val provideMethod = FunSpec.builder("provideActivityMainBinding")
             .addAnnotation(providesAnnotation)
-//            .addModifiers(KModifier.PUBLIC)
             .addParameter("layoutInflater", ClassName("android.view", "LayoutInflater"))
             .returns(ClassName("com.google.dagger.databinding", "ActivityMainBinding"))
             .addStatement("return %T.inflate(layoutInflater)", ClassName("com.google.dagger.databinding", "ActivityMainBinding"))
-
-        // Add provide method to class builder
         classBuilder.addFunction(provideMethod.build())
-
-        // Add class builder to file builder
         fileBuilder.addType(classBuilder.build())
-
-        // Write the file
         return fileBuilder.build()
-
-
     }
 
     private fun listFilesRecursively(directory: File, fileList: MutableList<File>) {
