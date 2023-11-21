@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin)
     alias(libs.plugins.kapt)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -32,11 +33,21 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildTypes {
+        viewBinding {
+            enable = true
+        }
+    }
+}
+
+ksp {
+    arg("viewBindingBuildDirectory", "${layout.buildDirectory.dir("generated/data_binding_base_class_source_out").get().asFile}")
 }
 
 dependencies {
-//    implementation(project(":hilt-android-ext"))
-    implementation("com.github.HuairenWu:HiltAndroidExt:1.0.0")
+//    implementation("com.github.HuairenWu:HiltAndroidExt:1.0.0")
+    implementation(project(":hilt-android-ext"))
+    ksp(project(":viewbinding"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

@@ -23,3 +23,4 @@ dependencyResolutionManagement {
 rootProject.name = "HiltAndroidExt"
 include(":app")
 include(":hilt-android-ext")
+include(":viewbinding")
