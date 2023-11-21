@@ -49,6 +49,7 @@ afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("maven") {
+                from(components["release"])
                 groupId = "com.github.HuairenWu"
                 artifactId = "HiltAndroidExt"
                 version = "0.0.2"
