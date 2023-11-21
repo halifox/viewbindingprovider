@@ -32,6 +32,9 @@ class MySymbolProcessor(private val environment: SymbolProcessorEnvironment) : S
     override fun process(resolver: Resolver): List<KSAnnotated> {
 
         thread(true) {
+            resolver.getAllFiles().forEach {
+                environment.logger.warn("${it}")
+            }
             val viewBindingBuildDirectory = environment.options["viewBindingBuildDirectory"] ?: throw IllegalStateException()
             val directory = File(viewBindingBuildDirectory)
             val fileList = mutableListOf<File>()
