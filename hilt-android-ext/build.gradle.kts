@@ -49,9 +49,9 @@ afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("maven") {
-                groupId = "com.google.dagger"
-                artifactId = "hilt-android-ext"
-                version = "0.0.1"
+                groupId = "com.github.HuairenWu"
+                artifactId = "HiltAndroidExt"
+                version = "0.0.2"
             }
         }
     }
