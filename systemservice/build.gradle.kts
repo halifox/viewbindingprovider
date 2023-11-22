@@ -33,12 +33,12 @@ android {
 }
 
 dependencies {
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.junit)
     androidTestImplementation(libs.junit.ext)
-
-    api(libs.hilt.android)
-    kapt(libs.hilt.compiler)
 }
 
 afterEvaluate {
@@ -48,7 +48,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.HuairenWu.HiltAndroidExt"
                 artifactId = "systemservice"
-                version = "1.0.5"
+                version = "1.0.6"
             }
         }
     }

@@ -21,9 +21,11 @@ eventbus = "3.3.1"
 fragment = "1.6.2"
 gson = "2.10.1"
 hilt-android = "2.48.1"
+javaparser = "3.25.6"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 koinAndroid = "3.5.0"
+kotlinpoetKsp = "1.15.1"
 kotlinxSerializationJson = "1.6.0"
 ktor = "2.3.6"
 lifecycle = "2.6.2"
@@ -46,6 +48,7 @@ swiperefreshlayout = "1.1.0"
 startupRuntime = "1.1.1"
 sharetarget = "1.2.0"
 supabase = "1.4.7"
+symbolProcessingApi = "1.9.20-1.0.14"
 utilcodex = "1.31.1"
 webkit = "1.8.0"
 window = "1.2.0"
@@ -96,9 +99,13 @@ androidx-window = { module = "androidx.window:window", version.ref = "window" }
 androidx-window-extensions-core = { module = "androidx.window.extensions.core:core", version.ref = "windowCore" }
 androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "workRuntime" }
 espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+javaparser-core-serialization = { module = "com.github.javaparser:javaparser-core-serialization", version.ref = "javaparser" }
+javaparser-core = { module = "com.github.javaparser:javaparser-core", version.ref = "javaparser" }
+javaparser-symbol-solver-core = { module = "com.github.javaparser:javaparser-symbol-solver-core", version.ref = "javaparser" }
 junit = { module = "junit:junit", version.ref = "junit" }
 junit-ext = { module = "androidx.test.ext:junit", version.ref = "junitVersion" }
 #media3
+kotlinpoet-ksp = { module = "com.squareup:kotlinpoet-ksp", version.ref = "kotlinpoetKsp" }
 media3-cast = { module = "androidx.media3:media3-cast", version.ref = "media3" }
 media3-common = { module = "androidx.media3:media3-common", version.ref = "media3" }
 media3-database = { module = "androidx.media3:media3-database", version.ref = "media3" }
@@ -123,6 +130,7 @@ material = { module = "com.google.android.material:material", version.ref = "mat
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt-android" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt-android" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+symbol-processing-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "symbolProcessingApi" }
 zxing = { module = "com.google.zxing:core", version.ref = "zxing" }
 #jetbrains
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
