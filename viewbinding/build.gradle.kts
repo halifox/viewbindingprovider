@@ -1,5 +1,6 @@
 plugins {
-    id("org.jetbrains.kotlin.jvm")
+    kotlin("jvm")
+    id("maven-publish")
 }
 
 dependencies {
@@ -11,4 +12,16 @@ dependencies {
     implementation("com.github.javaparser:javaparser-core-serialization:3.25.6")
     //https://github.com/square/kotlinpoet
     implementation("com.squareup:kotlinpoet-ksp:1.15.1")
+}
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("maven") {
+                from(components["java"])
+                groupId = "com.github.HuairenWu"
+                artifactId = "HiltAndroidExt-ViewBinding"
+                version = "1.0.1"
+            }
+        }
+    }
 }
