@@ -62,7 +62,7 @@ class MySymbolProcessor(private val environment: SymbolProcessorEnvironment) : S
         // 遍历文件列表
         viewBindingFileSet.forEach {
             // 打印日志，显示当前处理的 viewBinding 文件的路径
-            environment.logger.warn("viewBinding file path:${it.absolutePath} ")
+            environment.logger.info("The path to the generated files for view binding is:${it.absolutePath} ")
             // 判断文件是否以 表示生成的 ViewBinding 类文件的 后缀名结尾
             if (it.name.endsWith(VIEW_BINDING_SUFFIX)) {
                 try {
@@ -75,10 +75,10 @@ class MySymbolProcessor(private val environment: SymbolProcessorEnvironment) : S
                     // 创建 ClassName 对象，并将其添加到 viewBindingClassNameSet 集合中
                     viewBindingClassNameSet.add(ClassName(packageName, simpleNames))
                     // 打印日志，显示解析成功的 viewBinding 类名
-                    environment.logger.warn("viewBinding file parse:${ClassName(packageName, simpleNames)} ")
+                    environment.logger.info("Parsing of the view binding file is complete. The parsing result is:${ClassName(packageName, simpleNames)} ")
                 } catch (e: Exception) {
                     // 打印日志，显示解析异常信息
-                    environment.logger.warn("viewBinding file parse rxception:${e} ")
+                    environment.logger.warn("An error occurred while parsing the view binding file. The error exception is:${e} ")
                     environment.logger.warn("${e.message} ")
                 }
             }
