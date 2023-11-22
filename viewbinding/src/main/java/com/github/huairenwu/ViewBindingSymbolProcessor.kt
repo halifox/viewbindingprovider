@@ -1,4 +1,4 @@
-package com.google.dagger
+package com.github.huairenwu
 
 import com.github.javaparser.StaticJavaParser
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration
@@ -46,7 +46,7 @@ class ViewBindingSymbolProcessor(private val environment: SymbolProcessorEnviron
     // 实现 SymbolProcessor 接口中的 process 方法
     override fun process(resolver: Resolver): List<KSAnnotated> {
         // 获取配置中的 viewBindingBuildDirectory 参数，如果不存在则抛出异常
-        val viewBindingDirectoryPath = environment.options[VIEW_BINDING_BUILD_DIRECTORY] ?: throw IllegalStateException("The \"${VIEW_BINDING_BUILD_DIRECTORY}\" parameter was not found in KSP.")
+        val viewBindingDirectoryPath = environment.options[VIEW_BINDING_BUILD_DIRECTORY] ?: throw IllegalStateException("The \"$VIEW_BINDING_BUILD_DIRECTORY\" parameter was not found in KSP.")
         val viewBindingDirectory = File(viewBindingDirectoryPath)
         val viewBindingFileSet = mutableSetOf<File>()
         val viewBindingClassNameSet = mutableSetOf<ClassName>()

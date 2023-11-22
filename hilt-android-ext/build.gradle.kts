@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.google.dagger"
+    namespace = "com.github.huairenwu"
     compileSdk = 34
 
     defaultConfig {
@@ -46,9 +46,9 @@ afterEvaluate {
         publications {
             create<MavenPublication>("maven") {
                 from(components["release"])
-                groupId = "com.github.HuairenWu"
+                groupId = "com.github.huairenwu"
                 artifactId = "HiltAndroidExt"
-                version = "1.0.2"
+                version = "1.0.3"
             }
         }
     }

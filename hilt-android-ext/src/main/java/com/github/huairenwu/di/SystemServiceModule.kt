@@ -1,4 +1,4 @@
-package com.google.dagger.di
+package com.github.huairenwu.di
 
 import android.accounts.AccountManager
 import android.app.ActivityManager

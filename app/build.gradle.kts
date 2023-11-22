@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.google.dagger"
+    namespace = "com.github.huairenwu"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.google.dagger"
+        applicationId = "com.github.huairenwu"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
@@ -59,7 +59,8 @@ ksp {
 }
 
 dependencies {
-//    implementation("com.github.HuairenWu:HiltAndroidExt:1.0.0")
+//    implementation("com.github.HuairenWu:HiltAndroidExt:1.0.2")
+//    ksp("com.github.HuairenWu:HiltAndroidExt-ViewBinding:1.0.2")
     implementation(project(":hilt-android-ext"))
     ksp(project(":viewbinding"))
 

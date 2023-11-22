@@ -1,4 +1,4 @@
-package com.google.dagger
+package com.github.huairenwu
 
 import com.google.devtools.ksp.processing.SymbolProcessor
 import com.google.devtools.ksp.processing.SymbolProcessorEnvironment

@@ -1,4 +1,4 @@
-package com.google.dagger
+package com.github.huairenwu
 
 import org.junit.Test
 
