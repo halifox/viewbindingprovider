@@ -20,7 +20,7 @@ afterEvaluate {
                 from(components["java"])
                 groupId = "com.github.HuairenWu"
                 artifactId = "HiltAndroidExt-ViewBinding"
-                version = "1.0.1"
+                version = "1.0.2"
             }
         }
     }
