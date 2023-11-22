@@ -59,10 +59,10 @@ ksp {
 }
 
 dependencies {
-//    implementation("com.github.HuairenWu:HiltAndroidExt:1.0.2")
-//    ksp("com.github.HuairenWu:HiltAndroidExt-ViewBinding:1.0.2")
-    implementation(project(":hilt-android-ext"))
-    ksp(project(":viewbinding"))
+    implementation("com.github.HuairenWu:HiltAndroidExt:1.0.4")
+    ksp("com.github.HuairenWu:ViewBinding:1.0.4")
+//    implementation(project(":hilt-android-ext"))
+//    ksp(project(":viewbinding"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
