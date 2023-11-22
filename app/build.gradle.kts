@@ -59,10 +59,10 @@ ksp {
 }
 
 dependencies {
-    implementation("com.github.HuairenWu.HiltAndroidExt:systemservice:1.0.6")
-    ksp("com.github.HuairenWu.HiltAndroidExt:viewbinding:1.0.6")
-//    implementation(project(":systemservice"))
-//    ksp(project(":viewbinding"))
+//    implementation("com.github.HuairenWu.HiltAndroidExt:systemservice:1.1.0")
+//    ksp("com.github.HuairenWu.HiltAndroidExt:viewbinding:1.1.0")
+    implementation(project(":systemservice"))
+    ksp(project(":viewbinding"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
