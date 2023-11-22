@@ -1,1 +1,1 @@
-com.google.dagger.MySymbolProcessorProvider
+com.google.dagger.ViewBindingSymbolProcessorProvider

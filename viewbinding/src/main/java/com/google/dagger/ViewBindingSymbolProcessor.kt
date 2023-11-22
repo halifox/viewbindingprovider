@@ -13,14 +13,7 @@ import com.squareup.kotlinpoet.ksp.writeTo
 import java.io.File
 import kotlin.concurrent.thread
 
-
-class MySymbolProcessorProvider : SymbolProcessorProvider {
-    override fun create(environment: SymbolProcessorEnvironment): SymbolProcessor {
-        return MySymbolProcessor(environment)
-    }
-}
-
-class MySymbolProcessor(private val environment: SymbolProcessorEnvironment) : SymbolProcessor {
+class ViewBindingSymbolProcessor(private val environment: SymbolProcessorEnvironment) : SymbolProcessor {
     companion object {
         // 常量，表示生成的 ViewBinding 类文件的目录
         private const val VIEW_BINDING_BUILD_DIRECTORY = "viewBindingBuildDirectory"
