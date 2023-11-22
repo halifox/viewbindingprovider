@@ -58,6 +58,7 @@ import androidx.core.content.ContextCompat
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ActivityContext
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 
@@ -104,8 +105,8 @@ object SystemServiceModule {
     @Provides
     fun provideKeyguardManager(context: Context) = ContextCompat.getSystemService(context, KeyguardManager::class.java) ?: throw NullPointerException()
 
-    @Provides
-    fun provideLayoutInflater(context: Context) = ContextCompat.getSystemService(context, LayoutInflater::class.java) ?: throw NullPointerException()
+//    @Provides
+//    fun provideLayoutInflater(context: Context) = ContextCompat.getSystemService(context, LayoutInflater::class.java) ?: throw NullPointerException()
 
     @Provides
     fun provideLocationManager(context: Context) = ContextCompat.getSystemService(context, LocationManager::class.java) ?: throw NullPointerException()

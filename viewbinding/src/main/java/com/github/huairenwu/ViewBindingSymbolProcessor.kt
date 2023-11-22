@@ -8,6 +8,7 @@ import com.squareup.kotlinpoet.AnnotationSpec
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FileSpec
 import com.squareup.kotlinpoet.FunSpec
+import com.squareup.kotlinpoet.ParameterSpec
 import com.squareup.kotlinpoet.TypeSpec
 import com.squareup.kotlinpoet.ksp.writeTo
 import java.io.File
@@ -27,6 +28,9 @@ class ViewBindingSymbolProcessor(private val environment: SymbolProcessorEnviron
     private val classProvides = ClassName("dagger", "Provides")
     private val classActivityComponent = ClassName("dagger.hilt.android.components", "ActivityComponent")
     private val classLayoutInflater = ClassName("android.view", "LayoutInflater")
+    private val classContext = ClassName("android.content", "Context")
+    private val classApplicationContext = ClassName("dagger.hilt.android.qualifiers", "ApplicationContext")
+    private val classActivityContext = ClassName("dagger.hilt.android.qualifiers", "ActivityContext")
 
     // 创建一个 Module 注解对象
     // @Module
@@ -98,10 +102,26 @@ class ViewBindingSymbolProcessor(private val environment: SymbolProcessorEnviron
     private fun generateViewBindingModule(viewBindingClassNameSet: Set<ClassName>): FileSpec {
         // 指定包名和文件名
         val fileBuilder = FileSpec.builder("com.google.dagger.di", "ViewBindingModel")
+            .addImport("androidx.core.content", "ContextCompat")
         // 指定类名和注解
         val classBuilder = TypeSpec.classBuilder("ViewBindingModel")
             .addAnnotation(moduleAnnotation)
             .addAnnotation(installInAnnotation)
+        run {
+            val parameterSpec = ParameterSpec.builder("context", classContext)
+                .addAnnotation(AnnotationSpec.builder(classActivityContext).build())
+                .build()
+
+            // 创建 provideViewBinding 方法
+            val provideMethod = FunSpec.builder("provideLayoutInflater")
+                .addAnnotation(providesAnnotation)
+                .addParameter(parameterSpec)
+                .returns(classLayoutInflater)
+                .addStatement("return ContextCompat.getSystemService(context, LayoutInflater::class.java) ?: throw NullPointerException()")
+            // 将 provide 方法添加到 classBuilder 中
+            classBuilder.addFunction(provideMethod.build())
+        }
+
         // 遍历 viewBindingClassNameSet 集合
         viewBindingClassNameSet.forEach { className ->
             // 创建 provideViewBinding 方法

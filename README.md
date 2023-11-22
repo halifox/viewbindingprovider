@@ -6,7 +6,7 @@
 
 ```groovy
 dependencies {
-    implementation("com.github.HuairenWu.HiltAndroidExt:systemservice:1.1.0")
+    implementation("com.github.HuairenWu.HiltAndroidExt:systemservice:1.1.1")
 }
 ```
 
@@ -14,8 +14,7 @@ dependencies {
 
 ```groovy
 dependencies {
-    //依赖于 implementation("com.github.HuairenWu.HiltAndroidExt:systemservice:1.1.0") 中的 provideLayoutInflater 
-    ksp("com.github.HuairenWu.HiltAndroidExt:viewbinding:1.1.0")
+    ksp("com.github.HuairenWu.HiltAndroidExt:viewbinding:1.1.1")
 }
 
 //指定ViewBinding生成类目录 如果没有对其修改则使用以下示例
