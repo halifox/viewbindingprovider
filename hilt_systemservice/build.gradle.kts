@@ -46,9 +46,9 @@ afterEvaluate {
         publications {
             create<MavenPublication>("maven") {
                 from(components["release"])
-                groupId = "com.github.HuairenWu.HiltAndroidExt"
-                artifactId = "systemservice"
-                version = "1.1.2"
+                groupId = "com.github.HuairenWu.AndroidExt"
+                artifactId = "hilt_systemservice"
+                version = "1.1.3"
             }
         }
     }

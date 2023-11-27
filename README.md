@@ -6,7 +6,7 @@
 
 ```groovy
 dependencies {
-    implementation("com.github.HuairenWu.HiltAndroidExt:systemservice:1.1.2")
+    implementation("com.github.HuairenWu.AndroidExt:hilt_systemservice:1.1.3")
 }
 ```
 
@@ -14,7 +14,7 @@ dependencies {
 
 ```groovy
 dependencies {
-    ksp("com.github.HuairenWu.HiltAndroidExt:viewbinding:1.1.2")
+    ksp("com.github.HuairenWu.AndroidExt:hilt_viewbinding:1.1.3")
 }
 
 //指定ViewBinding生成类目录 如果没有对其修改则使用以下示例

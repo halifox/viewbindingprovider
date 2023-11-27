@@ -18,9 +18,9 @@ afterEvaluate {
         publications {
             create<MavenPublication>("maven") {
                 from(components["java"])
-                groupId = "com.github.HuairenWu.HiltAndroidExt"
-                artifactId = "viewbinding"
-                version = "1.1.2"
+                groupId = "com.github.HuairenWu.AndroidExt"
+                artifactId = "hilt_viewbinding"
+                version = "1.1.3"
             }
         }
     }

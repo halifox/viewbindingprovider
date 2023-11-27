@@ -10,8 +10,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/systemservice" />
-            <option value="$PROJECT_DIR$/viewbinding" />
+            <option value="$PROJECT_DIR$/hilt_systemservice" />
+            <option value="$PROJECT_DIR$/hilt_viewbinding" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
