@@ -48,17 +48,16 @@ import android.print.PrintManager
 import android.telecom.TelecomManager
 import android.telephony.SubscriptionManager
 import android.telephony.TelephonyManager
-import android.view.LayoutInflater
 import android.view.WindowManager
 import android.view.accessibility.AccessibilityManager
 import android.view.accessibility.CaptioningManager
 import android.view.inputmethod.InputMethodManager
 import android.view.textservice.TextServicesManager
+import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ActivityContext
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 
@@ -192,48 +191,47 @@ object SystemServiceModule {
     @Provides
     fun provideBatteryManager(context: Context) = ContextCompat.getSystemService(context, BatteryManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     @Provides
     fun provideCameraManager(context: Context) = ContextCompat.getSystemService(context, CameraManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     @Provides
     fun provideJobScheduler(context: Context) = ContextCompat.getSystemService(context, JobScheduler::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     @Provides
     fun provideLauncherApps(context: Context) = ContextCompat.getSystemService(context, LauncherApps::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     @Provides
     fun provideMediaProjectionManager(context: Context) = ContextCompat.getSystemService(context, MediaProjectionManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     @Provides
     fun provideMediaSessionManager(context: Context) = ContextCompat.getSystemService(context, MediaSessionManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     @Provides
     fun provideRestrictionsManager(context: Context) = ContextCompat.getSystemService(context, RestrictionsManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     @Provides
     fun provideTelecomManager(context: Context) = ContextCompat.getSystemService(context, TelecomManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     @Provides
     fun provideTvInputManager(context: Context) = ContextCompat.getSystemService(context, TvInputManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     @Provides
     fun provideUsageStatsManager(context: Context) = ContextCompat.getSystemService(context, UsageStatsManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP_MR1)
     @Provides
-    fun provideSubscriptionManager(context: Context): SubscriptionManager {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
-            ContextCompat.getSystemService(context, SubscriptionManager::class.java) ?: throw NullPointerException()
-        } else {
-            throw NullPointerException()
-        }
-    }
+    fun provideSubscriptionManager(context: Context): SubscriptionManager = ContextCompat.getSystemService(context, SubscriptionManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.M)
     @Provides
-    fun provideNetworkStatsManager(context: Context): NetworkStatsManager {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            ContextCompat.getSystemService(context, NetworkStatsManager::class.java) ?: throw NullPointerException()
-        } else {
-            throw NullPointerException()
-        }
-    }
+    fun provideNetworkStatsManager(context: Context): NetworkStatsManager = ContextCompat.getSystemService(context, NetworkStatsManager::class.java) ?: throw NullPointerException()
 }

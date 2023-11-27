@@ -20,7 +20,7 @@ afterEvaluate {
                 from(components["java"])
                 groupId = "com.github.HuairenWu.HiltAndroidExt"
                 artifactId = "viewbinding"
-                version = "1.1.1"
+                version = "1.1.2"
             }
         }
     }

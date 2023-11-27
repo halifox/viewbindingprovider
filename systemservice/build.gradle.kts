@@ -11,7 +11,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 19
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -48,7 +48,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.HuairenWu.HiltAndroidExt"
                 artifactId = "systemservice"
-                version = "1.1.1"
+                version = "1.1.2"
             }
         }
     }
