@@ -59,7 +59,6 @@ ksp {
 }
 
 dependencies {
-    implementation(project(":library"))
     implementation(project(":hilt_systemservice"))
     ksp(project(":hilt_viewbinding"))
 

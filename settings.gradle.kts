@@ -25,4 +25,3 @@ rootProject.name = "AndroidExt"
 include(":app")
 include(":hilt_systemservice")
 include(":hilt_viewbinding")
-include(":library")

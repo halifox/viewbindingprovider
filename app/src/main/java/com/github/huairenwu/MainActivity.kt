@@ -7,8 +7,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.blankj.utilcode.util.AppUtils
-import com.blankj.utilcode.util.LogUtils
 import com.github.huairenwu.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -33,11 +31,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        LogUtils.e("are you ok?")
 
-        AppUtils.getAppsInfo().forEach {
-            LogUtils.e("${it}")
-        }
 
         nsdManager.discoverServices("_video_sync_c._tcp.", NsdManager.PROTOCOL_DNS_SD, object : NsdManager.DiscoveryListener {
             override fun onStartDiscoveryFailed(serviceType: String?, errorCode: Int) {
