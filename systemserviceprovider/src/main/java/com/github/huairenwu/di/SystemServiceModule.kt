@@ -65,129 +65,171 @@ import dagger.hilt.components.SingletonComponent
 @Module
 @InstallIn(SingletonComponent::class)
 object SystemServiceModule {
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideContext(@ApplicationContext context: Context) = context
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideAccessibilityManager(context: Context) = ContextCompat.getSystemService(context, AccessibilityManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideAccountManager(context: Context) = ContextCompat.getSystemService(context, AccountManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideActivityManager(context: Context) = ContextCompat.getSystemService(context, ActivityManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideAlarmManager(context: Context) = ContextCompat.getSystemService(context, AlarmManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideAudioManager(context: Context) = ContextCompat.getSystemService(context, AudioManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideClipboardManager(context: Context) = ContextCompat.getSystemService(context, ClipboardManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideConnectivityManager(context: Context) = ContextCompat.getSystemService(context, ConnectivityManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideDevicePolicyManager(context: Context) = ContextCompat.getSystemService(context, DevicePolicyManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideDownloadManager(context: Context) = ContextCompat.getSystemService(context, DownloadManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideDropBoxManager(context: Context) = ContextCompat.getSystemService(context, DropBoxManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideInputMethodManager(context: Context) = ContextCompat.getSystemService(context, InputMethodManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideKeyguardManager(context: Context) = ContextCompat.getSystemService(context, KeyguardManager::class.java) ?: throw NullPointerException()
 
+//    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
 //    @Provides
 //    fun provideLayoutInflater(context: Context) = ContextCompat.getSystemService(context, LayoutInflater::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideLocationManager(context: Context) = ContextCompat.getSystemService(context, LocationManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideNfcManager(context: Context) = ContextCompat.getSystemService(context, NfcManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideNotificationManager(context: Context) = ContextCompat.getSystemService(context, NotificationManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun providePowerManager(context: Context) = ContextCompat.getSystemService(context, PowerManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideSearchManager(context: Context) = ContextCompat.getSystemService(context, SearchManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideSensorManager(context: Context) = ContextCompat.getSystemService(context, SensorManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideStorageManager(context: Context) = ContextCompat.getSystemService(context, StorageManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideTelephonyManager(context: Context) = ContextCompat.getSystemService(context, TelephonyManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideTextServicesManager(context: Context) = ContextCompat.getSystemService(context, TextServicesManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideUiModeManager(context: Context) = ContextCompat.getSystemService(context, UiModeManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideUsbManager(context: Context) = ContextCompat.getSystemService(context, UsbManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideVibrator(context: Context) = ContextCompat.getSystemService(context, Vibrator::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideWallpaperManager(context: Context) = ContextCompat.getSystemService(context, WallpaperManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideWifiP2pManager(context: Context) = ContextCompat.getSystemService(context, WifiP2pManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideWifiManager(context: Context) = ContextCompat.getSystemService(context, WifiManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideWindowManager(context: Context) = ContextCompat.getSystemService(context, WindowManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideInputManager(context: Context) = ContextCompat.getSystemService(context, InputManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideMediaRouter(context: Context) = ContextCompat.getSystemService(context, MediaRouter::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideNsdManager(context: Context) = ContextCompat.getSystemService(context, NsdManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Provides
     fun provideDisplayManager(context: Context) = ContextCompat.getSystemService(context, DisplayManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Provides
     fun provideUserManager(context: Context) = ContextCompat.getSystemService(context, UserManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Provides
     fun provideBluetoothManager(context: Context) = ContextCompat.getSystemService(context, BluetoothManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
     @Provides
     fun provideAppOpsManager(context: Context) = ContextCompat.getSystemService(context, AppOpsManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
     @Provides
     fun provideCaptioningManager(context: Context) = ContextCompat.getSystemService(context, CaptioningManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
     @Provides
     fun provideConsumerIrManager(context: Context) = ContextCompat.getSystemService(context, ConsumerIrManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
     @Provides
     fun providePrintManager(context: Context) = ContextCompat.getSystemService(context, PrintManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideAppWidgetManager(context: Context) = ContextCompat.getSystemService(context, AppWidgetManager::class.java) ?: throw NullPointerException()
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @Provides
     fun provideBatteryManager(context: Context) = ContextCompat.getSystemService(context, BatteryManager::class.java) ?: throw NullPointerException()
 

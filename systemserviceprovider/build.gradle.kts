@@ -48,7 +48,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.HuairenWu.AndroidExt"
                 artifactId = "systemserviceprovider"
-                version = "1.1.5"
+                version = "1.1.6"
             }
         }
     }
