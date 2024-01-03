@@ -39,7 +39,7 @@ dependencies {
     androidTestImplementation(libs.junit.ext)
     androidTestImplementation(libs.espresso.core)
 
-
+    implementation("androidx.annotation:annotation:1.7.1")
     implementation("com.google.code.gson:gson:2.10.1")
 }
 
