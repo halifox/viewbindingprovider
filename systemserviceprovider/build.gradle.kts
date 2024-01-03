@@ -11,7 +11,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 19
+        minSdk = 16
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -47,8 +47,8 @@ afterEvaluate {
             create<MavenPublication>("maven") {
                 from(components["release"])
                 groupId = "com.github.HuairenWu.AndroidExt"
-                artifactId = "hilt_systemservice"
-                version = "1.1.3"
+                artifactId = "systemserviceprovider"
+                version = "1.1.5"
             }
         }
     }

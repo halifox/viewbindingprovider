@@ -59,8 +59,8 @@ ksp {
 }
 
 dependencies {
-    implementation(project(":hilt_systemservice"))
-    ksp(project(":hilt_viewbinding"))
+    implementation(project(":systemserviceprovider"))
+    ksp(project(":viewbindingprovider"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
