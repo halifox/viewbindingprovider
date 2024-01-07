@@ -21,7 +21,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AndroidExt"
 include(":app")
 include(":systemserviceprovider")
 include(":viewbindingprovider")
