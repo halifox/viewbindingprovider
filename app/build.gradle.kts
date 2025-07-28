@@ -1,19 +1,18 @@
 plugins {
-    alias(libs.plugins.application)
-    alias(libs.plugins.kotlin)
-    alias(libs.plugins.kapt)
-    alias(libs.plugins.hilt)
-    alias(libs.plugins.ksp)
+    id("com.android.application") version "8.11.1"
+    id("org.jetbrains.kotlin.android") version "2.2.0"
+    id("com.google.devtools.ksp") version "2.2.0-2.0.2"
+    id("com.google.dagger.hilt.android") version "2.57"
 }
 
 android {
-    namespace = "com.github.huairenwu"
-    compileSdk = 34
+    namespace = "com.github.provides.example"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.github.huairenwu"
+        applicationId = "com.github.provides.example"
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -59,18 +58,18 @@ ksp {
 }
 
 dependencies {
-    implementation(project(":systemserviceprovider"))
     ksp(project(":viewbindingprovider"))
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity.ktx)
-    implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.espresso.core)
-    androidTestImplementation(libs.junit.ext)
+    implementation("androidx.core:core-ktx:1.16.0")
+    implementation("androidx.appcompat:appcompat:1.7.1")
+    implementation("com.google.android.material:material:1.12.0")
+    implementation("androidx.activity:activity-ktx:1.10.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.2.1")
 
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+
+    implementation("com.google.dagger:hilt-android:2.57")
+    ksp("com.google.dagger:hilt-compiler:2.57")
 }

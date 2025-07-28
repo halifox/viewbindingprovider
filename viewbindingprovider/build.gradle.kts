@@ -1,27 +1,11 @@
 plugins {
-    kotlin("jvm")
-    id("maven-publish")
+    kotlin("jvm") version "2.2.0"
 }
 
 dependencies {
-    //https://github.com/google/ksp
-    implementation(libs.symbol.processing.api)
-    //https://github.com/javaparser/javaparser
-    implementation(libs.javaparser.symbol.solver.core)
-    implementation(libs.javaparser.core)
-    implementation(libs.javaparser.core.serialization)
-    //https://github.com/square/kotlinpoet
-    implementation(libs.kotlinpoet.ksp)
-}
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("maven") {
-                from(components["java"])
-                groupId = "com.github.HuairenWu.AndroidExt"
-                artifactId = "viewbindingprovider"
-                version = "1.1.6"
-            }
-        }
-    }
+    implementation("com.google.devtools.ksp:symbol-processing-api:2.2.0-2.0.2")
+    implementation("com.github.javaparser:javaparser-symbol-solver-core:3.27.0")
+    implementation("com.github.javaparser:javaparser-core:3.27.0")
+    implementation("com.github.javaparser:javaparser-core-serialization:3.27.0")
+    implementation("com.squareup:kotlinpoet-ksp:2.2.0")
 }

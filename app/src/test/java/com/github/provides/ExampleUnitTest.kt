@@ -1,4 +1,4 @@
-package com.github.huairenwu
+package com.github.provides
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.github.huairenwu
+package com.github.provides
 
 import com.google.devtools.ksp.processing.SymbolProcessor
 import com.google.devtools.ksp.processing.SymbolProcessorEnvironment

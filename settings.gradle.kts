@@ -22,5 +22,4 @@ dependencyResolutionManagement {
 }
 
 include(":app")
-include(":systemserviceprovider")
 include(":viewbindingprovider")

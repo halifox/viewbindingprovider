@@ -1,4 +1,4 @@
-package com.github.huairenwu
+package com.github.provides
 
 import com.github.javaparser.StaticJavaParser
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration

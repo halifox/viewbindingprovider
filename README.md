@@ -1,20 +1,8 @@
-> 非正式工具 请勿在工作项目中使用
-
-[![](https://jitpack.io/v/HuairenWu/HiltAndroidExt.svg)](https://jitpack.io/#HuairenWu/HiltAndroidExt)
-
-# 自动 Provides Android 中的系统服务
+# 通过 Hilt 自动 Provides 项目内所有 ViewBinding 生成类
 
 ```groovy
 dependencies {
-    implementation("com.github.HuairenWu.AndroidExt:systemserviceprovider:1.1.6")
-}
-```
-
-# 自动 Provides 项目内所有 ViewBinding 生成类
-
-```groovy
-dependencies {
-    ksp("com.github.HuairenWu.AndroidExt:viewbindingprovider:1.1.6")
+    ksp("com.github.halifox:viewbindingprovider:tag")
 }
 
 //指定ViewBinding生成类目录 如果没有对其修改则使用以下示例

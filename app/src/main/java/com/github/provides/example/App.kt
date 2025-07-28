@@ -1,4 +1,4 @@
-package com.github.huairenwu
+package com.github.provides.example
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
