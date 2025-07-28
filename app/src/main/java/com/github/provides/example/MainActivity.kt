@@ -13,7 +13,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // 直接使用 binding 访问布局控件
+        binding.textView.text = "Hello Hilt + ViewBinding"
     }
 }
