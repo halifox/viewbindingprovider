@@ -1,5 +1,31 @@
 # 通过 Hilt 自动提供项目内所有 ViewBinding 生成类
 
+在 Android 项目中，每个 XML 布局文件对应一个 `ViewBinding` 类。通常我们需要在 `Activity` 或 `Fragment`
+中手动初始化这些类，例如：
+
+```kotlin
+val binding = ActivityMainBinding.inflate(layoutInflater)
+```
+
+当项目中有大量布局时，这种重复代码会增加样板、降低可维护性。
+
+该工具结合 Hilt + KSP，**自动扫描项目中的所有 `ViewBinding` 类，并将其注册为 Hilt 的依赖项**，从而实现：
+
+```kotlin
+@Inject
+lateinit var binding: ActivityMainBinding
+```
+
+即：
+
+* 无需手动调用 `inflate`；
+* Hilt 自动注入绑定类；
+* 避免重复代码，保持结构一致；
+* 提升初始化 View 的可维护性和模块化程度。
+
+本质作用是：
+**利用 KSP 编译期生成 Hilt Module，提供所有 `ViewBinding` 的 `@Provides` 方法，实现统一自动注入。**
+
 ## 使用方法
 
 步骤1. 在构建文件中添加 JitPack 仓库
